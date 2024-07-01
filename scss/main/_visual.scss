@@ -1,0 +1,44 @@
+#visual {
+	width: 100%;
+	height: calc(100vh - 121px);
+	overflow: hidden;
+	background-color: #4987de77;
+	video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 0.6;
+	}
+	.inner {
+		width: 1200px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		h2 {
+			font-weight: 800;
+			// box-shadow: 18px 19px 80px 1px #ffffff93;
+			font-size: 90px;
+			line-height: 1.3;
+			font-family: 'Hahmlet';
+			color: #fff;
+			margin-bottom: 50px;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#visual {
+		.inner {
+			width: 100%;
+			padding: 0 30px;
+			h2 {
+				font: normal 10vw/1 'Hahmlet';
+				font-weight: 800;
+			}
+			a {
+				width: 100%;
+			}
+		}
+	}
+}

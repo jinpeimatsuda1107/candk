@@ -1,0 +1,31 @@
+.hidden {
+	position: absolute;
+	top: -99999999px;
+	opacity: 0;
+}
+.join {
+	width: 100%;
+	.inner {
+		width: 1200px;
+		margin: 0 auto;
+		padding: 148px 0px;
+		h1 {
+			display: block;
+			text-align: center;
+			font: bold 75px/1 'Nanum Gothic';
+			i {
+				color: rgb(157, 176, 195);
+			}
+		}
+		h2 {
+			text-align: center;
+			font: bold 20px/3.5 'Nanum Gothic';
+		}
+		span {
+			display: block;
+			text-align: center;
+			font: 15px/0 'Nanum Gothic';
+			color: #bbb;
+		}
+	}
+}

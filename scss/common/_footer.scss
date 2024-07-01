@@ -1,0 +1,124 @@
+#footer {
+	width: 100%;
+	// border-radius: 0 150px 0 0;
+	position: relative;
+	background-color: rgba(216, 225, 234, 0.32);
+	.footer_menu {
+		width: 1180px;
+		height: 240px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding: 60px 0px 60px;
+		margin: 0 auto;
+		.inner {
+			margin-bottom: 30px;
+			transform: translate(-70%, -10%);
+			ul {
+				display: block;
+				font: 15px/2 'Hahmlet';
+				li {
+					display: inline-block;
+					margin-right: 30px;
+				}
+			}
+		}
+		.inner2 {
+			transform: translate(-52%, 90%);
+			display: inline-block;
+			position: absolute;
+			li {
+				font: 15px/2 'Nanum Gothic';
+			}
+		}
+		.inner3 {
+			font-size: 0;
+			.ft_cs {
+				transform: translate(-80%, 20%);
+				display: inline-block;
+				vertical-align: top;
+				margin-right: 70px;
+				line-height: 1.6;
+				dl {
+					font: 15px/1.5 'Nanum Gothic';
+					display: block;
+					dt {
+						strong {
+							letter-spacing: -1px;
+							font-size: 28px;
+							font-weight: bold;
+							line-height: 1;
+							margin: 7px 0 10px;
+							display: block;
+						}
+					}
+					dd {
+						margin-bottom: 1px;
+						line-height: 1;
+						letter-spacing: 1px;
+						a {
+							display: inline-block;
+							margin-top: 10px;
+							border: 1px solid #333;
+							padding: 6px 12px;
+							border-radius: 5px;
+							text-align: center;
+							font-size: 13px;
+							text-decoration: none;
+							color: #333;
+						}
+					}
+				}
+			}
+			.ft_cs2 {
+				transform: translate(-2%, 20%);
+				display: inline-block;
+				vertical-align: top;
+				line-height: 1.6;
+				margin-right: 20px;
+				dl {
+					font: 15px/1.5 'Nanum Gothic';
+					display: block;
+					dt {
+						line-height: 1;
+						margin: 1px 0 24px;
+					}
+					dd {
+						margin-bottom: 1px;
+						line-height: 1;
+						letter-spacing: 1px;
+						a {
+							display: inline-block;
+							margin-top: 20px;
+							border: 1px solid #333;
+							padding: 6px 10px;
+							border-radius: 5px;
+							text-align: center;
+							font-size: 13px;
+							text-decoration: none;
+							color: #333;
+						}
+					}
+				}
+			}
+		}
+	}
+	.footer_copy {
+		text-align: center;
+		background-color: rgb(157, 176, 195);
+		font: 14px/2 'Hahmlet';
+		color: #fff;
+		height: 30px;
+		line-height: 30px;
+		letter-spacing: 4px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#footer {
+		width: 100%;
+		.footer_menu {
+			display: none;
+		}
+	}
+}

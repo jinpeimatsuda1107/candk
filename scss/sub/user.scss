@@ -1,0 +1,141 @@
+.hidden {
+	position: absolute;
+	top: -99999999px;
+	opacity: 0;
+}
+fieldset {
+	border: none;
+}
+table {
+	border-collapse: collapse;
+}
+.user {
+	width: 100%;
+	.inner {
+		width: 1200px;
+		margin: 0 auto;
+		padding: 100px 0px;
+		h1 {
+			font: bold 32px/3 'Hahmlet';
+			margin-bottom: 40px;
+			color: rgb(157, 176, 195);
+		}
+		h2 {
+			font: bold 17px/0.2 'Hahmlet';
+			color: #333;
+			margin-bottom: 15px;
+		}
+		.terms {
+			overflow: scroll;
+			width: 100%;
+			height: 200px;
+			padding: 50px;
+			resize: none;
+			font: 13px/1.3 'Nanum Gothic';
+			color: #333;
+			background-color: #fff;
+			border-left: 2px solid #bbb;
+			border-top: 2px solid #bbb;
+			// border-bottom: 1px solid #333;
+			margin-bottom: 10px;
+		}
+		.agreement {
+			margin-bottom: 60px;
+			display: flex;
+			gap: 10px;
+			label[for='agree'] {
+				font: 12px 'Nanum Gothic';
+				color: #333;
+			}
+		}
+		table {
+			width: 100%;
+			border-top: 3px solid rgb(157, 176, 195);
+			border-bottom: 3px solid rgb(157, 176, 195);
+			tr {
+				width: 100%;
+				th {
+					width: 15%;
+					text-align: center;
+					font: bold 14px/1 'Nanum Gothic';
+					color: #333;
+					padding: 20px 30px;
+					border-right: 2px solid rgb(157, 176, 195);
+					border-bottom: 2px solid rgb(157, 176, 195);
+					background-color: rgba(216, 225, 234, 0.32);
+					&:last-child {
+						background-color: rgba(216, 225, 234, 0.32);
+						text-align: center;
+						border-right: none;
+					}
+					input[type='reset'],
+					input[type='submit'] {
+						width: 150px;
+						height: 40px;
+						border: none;
+						background-color: rgb(157, 176, 195);
+						font: bold 18px/1 'Nanum Gothic';
+						color: #fff;
+					}
+				}
+				td {
+					width: 100%;
+					border-bottom: 2px solid rgb(157, 176, 195);
+					padding: 20px 30px;
+					display: flex;
+					flex-wrap: wrap;
+					gap: 15px;
+					input[type='text'],
+					input[type='password'] {
+						width: 30%;
+						height: 30px;
+						border: 2px solid rgb(157, 176, 195);
+						background-color: rgba(216, 225, 234, 0.32);
+						padding-left: 10px;
+					}
+					input[type='checkbox'],
+					input[type='radio'] {
+						margin-right: 15px;
+					}
+					label {
+						margin-right: 30px;
+					}
+					.foreveruser {
+						width: 100%;
+					}
+					p {
+						font: 14px/1 'Nanum Gothic';
+						display: block;
+						width: 100%;
+					}
+					select {
+						width: 20%;
+						height: 30px;
+						border: 2px solid #333;
+						background-color: rgb(157, 176, 195);
+						margin-left: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+#toggleBtn {
+	width: 34px;
+	height: 34px;
+	color: #fff;
+	background-color: rgb(157, 176, 195);
+	border-radius: 50%;
+	margin-left: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&::before {
+		content: '\f06e';
+		font-family: fontAwesome;
+	}
+	&.hide::before {
+		content: '\f070';
+		font-family: fontAwesome;
+	}
+}

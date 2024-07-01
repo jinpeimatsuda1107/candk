@@ -1,0 +1,793 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+dl,
+dt,
+dd,
+li,
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #000;
+}
+
+.wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#header_wrap {
+  width: 100%;
+  transition: all 1s;
+  background-color: rgba(216, 225, 234, 0.32);
+}
+#header_wrap .inner {
+  width: 1200px;
+  height: 180px;
+  margin: 0 auto;
+  position: relative;
+}
+#header_wrap .inner.on {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  z-index: 90;
+  background-color: rgb(157, 176, 195);
+  box-shadow: 5px 5px 5px #000;
+}
+#header_wrap .inner #logo {
+  width: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header_wrap .inner #logo a img {
+  width: 180px;
+  margin: 10px;
+  transform: translateX(55%);
+}
+#header_wrap .inner .menuWeb #gnb {
+  width: 70%;
+  position: absolute;
+  bottom: 0px;
+  left: 17%;
+  display: flex;
+  z-index: 1;
+}
+#header_wrap .inner .menuWeb #gnb li {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  position: relative;
+}
+#header_wrap .inner .menuWeb #gnb li a {
+  display: block;
+  padding: 22px;
+  font: bold 17px/1 "Hahmlet";
+  color: rgb(157, 176, 195);
+}
+#header_wrap .inner .menuWeb #gnb li .sub {
+  width: 100%;
+  position: absolute;
+  background-color: rgb(157, 176, 195);
+  display: none;
+}
+#header_wrap .inner .menuWeb #gnb li .sub li a {
+  font: bold 16px/1 "Hahmlet";
+  color: #fff;
+}
+#header_wrap .inner .menuWeb #gnb li .sub li a:hover {
+  background-color: #fff;
+  color: rgb(157, 176, 195);
+}
+#header_wrap .inner .menuWeb #gnb li:hover a {
+  background-color: rgb(157, 176, 195);
+  color: #fff;
+}
+#header_wrap .inner .menuWeb #gnb li:hover .sub {
+  display: block;
+}
+#header_wrap .inner .menuWeb .util {
+  position: fixed;
+  top: 20px;
+  right: 50px;
+  display: flex;
+  gap: 30px;
+}
+#header_wrap .inner .menuWeb .util li {
+  font-size: 15px;
+  height: 100px;
+}
+#header_wrap .inner .menuWeb .util li a {
+  font-size: 25px;
+}
+#header_wrap .inner .menuWeb .util li a i {
+  color: rgb(157, 176, 195);
+}
+#header_wrap .btnCall {
+  position: absolute;
+  top: 60%;
+  right: 15px;
+  display: none;
+  width: 20px;
+  height: 20px;
+}
+#header_wrap .btnCall::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(157, 176, 195);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: top 0.5s 0s, transform 0.5s 0.5s;
+}
+#header_wrap .btnCall::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(157, 176, 195);
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+}
+#header_wrap .btnCall i {
+  position: absolute;
+  text-indent: -9999999px;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(157, 176, 195);
+  top: 50%;
+  margin-top: -1px;
+  transition: all 1s;
+}
+#header_wrap .btnCall.on::before {
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(45deg);
+}
+#header_wrap .btnCall.on::after {
+  bottom: 50%;
+  margin-bottom: -1px;
+  transform: rotate(-45deg);
+}
+#header_wrap .btnCall.on i {
+  transform: translateX(100%);
+  opacity: 0;
+}
+#header_wrap .menuMo {
+  width: 270px;
+  height: 100vh;
+  background-color: rgba(157, 176, 195, 0.826);
+  position: fixed;
+  top: 0px;
+  left: -270px;
+  z-index: 10;
+  padding: 15px 25px;
+  transition: all 0.5s;
+}
+#header_wrap .menuMo.on {
+  left: 0px;
+}
+#header_wrap .menuMo h2 a img {
+  width: 150px;
+  margin: 40px;
+  text-align: center;
+}
+#header_wrap .menuMo ul li a {
+  display: block;
+  padding: 20px 0px;
+  font: bold 17px/1.2 "Hahmlet";
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (max-width: 700px) {
+  #header_wrap .inner {
+    width: 100%;
+  }
+  #header_wrap .inner h1 {
+    left: 30px;
+  }
+  #header_wrap .inner .menuWeb {
+    display: none;
+  }
+  #header_wrap .inner .btnCall {
+    display: block;
+  }
+  #header_wrap .menuMo {
+    display: block;
+  }
+}
+#footer {
+  width: 100%;
+  position: relative;
+  background-color: rgba(216, 225, 234, 0.32);
+}
+#footer .footer_menu {
+  width: 1180px;
+  height: 240px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 60px 0px 60px;
+  margin: 0 auto;
+}
+#footer .footer_menu .inner {
+  margin-bottom: 30px;
+  transform: translate(-70%, -10%);
+}
+#footer .footer_menu .inner ul {
+  display: block;
+  font: 15px/2 "Hahmlet";
+}
+#footer .footer_menu .inner ul li {
+  display: inline-block;
+  margin-right: 30px;
+}
+#footer .footer_menu .inner2 {
+  transform: translate(-52%, 90%);
+  display: inline-block;
+  position: absolute;
+}
+#footer .footer_menu .inner2 li {
+  font: 15px/2 "Nanum Gothic";
+}
+#footer .footer_menu .inner3 {
+  font-size: 0;
+}
+#footer .footer_menu .inner3 .ft_cs {
+  transform: translate(-80%, 20%);
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 70px;
+  line-height: 1.6;
+}
+#footer .footer_menu .inner3 .ft_cs dl {
+  font: 15px/1.5 "Nanum Gothic";
+  display: block;
+}
+#footer .footer_menu .inner3 .ft_cs dl dt strong {
+  letter-spacing: -1px;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+  margin: 7px 0 10px;
+  display: block;
+}
+#footer .footer_menu .inner3 .ft_cs dl dd {
+  margin-bottom: 1px;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+#footer .footer_menu .inner3 .ft_cs dl dd a {
+  display: inline-block;
+  margin-top: 10px;
+  border: 1px solid #333;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 13px;
+  text-decoration: none;
+  color: #333;
+}
+#footer .footer_menu .inner3 .ft_cs2 {
+  transform: translate(-2%, 20%);
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1.6;
+  margin-right: 20px;
+}
+#footer .footer_menu .inner3 .ft_cs2 dl {
+  font: 15px/1.5 "Nanum Gothic";
+  display: block;
+}
+#footer .footer_menu .inner3 .ft_cs2 dl dt {
+  line-height: 1;
+  margin: 1px 0 24px;
+}
+#footer .footer_menu .inner3 .ft_cs2 dl dd {
+  margin-bottom: 1px;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+#footer .footer_menu .inner3 .ft_cs2 dl dd a {
+  display: inline-block;
+  margin-top: 20px;
+  border: 1px solid #333;
+  padding: 6px 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 13px;
+  text-decoration: none;
+  color: #333;
+}
+#footer .footer_copy {
+  text-align: center;
+  background-color: rgb(157, 176, 195);
+  font: 14px/2 "Hahmlet";
+  color: #fff;
+  height: 30px;
+  line-height: 30px;
+  letter-spacing: 4px;
+}
+
+@media screen and (max-width: 700px) {
+  #footer {
+    width: 100%;
+  }
+  #footer .footer_menu {
+    display: none;
+  }
+}
+#visual {
+  width: 100%;
+  height: calc(100vh - 121px);
+  overflow: hidden;
+  background-color: rgba(73, 135, 222, 0.4666666667);
+}
+#visual video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+#visual .inner {
+  width: 1200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#visual .inner h2 {
+  font-weight: 800;
+  font-size: 90px;
+  line-height: 1.3;
+  font-family: "Hahmlet";
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 700px) {
+  #visual .inner {
+    width: 100%;
+    padding: 0 30px;
+  }
+  #visual .inner h2 {
+    font: normal 10vw/1 "Hahmlet";
+    font-weight: 800;
+  }
+  #visual .inner a {
+    width: 100%;
+  }
+}
+#stylecard {
+  width: 100%;
+  padding: 90px 0;
+  background-color: rgba(216, 225, 234, 0.32);
+}
+#stylecard .inner {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+#stylecard .inner h2 {
+  font: bold 40px/2 "Hahmlet";
+  color: rgb(157, 176, 195);
+  text-align: center;
+  margin-bottom: 50px;
+}
+#stylecard .inner .wrap {
+  width: 100%;
+}
+#stylecard .inner .wrap article:nth-of-type(1) {
+  width: 380px;
+  height: 620px;
+  float: left;
+  margin-right: 20px;
+  padding: 170px 50px 0;
+  text-align: center;
+}
+#stylecard .inner .wrap article:nth-of-type(2) {
+  float: left;
+  object-fit: cover;
+  margin-right: 20px;
+}
+#stylecard .inner .wrap article:nth-of-type(2) video {
+  width: 380px;
+  height: 450px;
+  transform: translate(20%, 30%);
+  border-radius: 220px 0 0 20px;
+  opacity: 0.8;
+}
+#stylecard .inner .wrap article:nth-of-type(3) {
+  float: left;
+  object-fit: cover;
+  margin-right: 20px;
+}
+#stylecard .inner .wrap article:nth-of-type(3) video {
+  width: 380px;
+  height: 450px;
+  transform: translate(20%, 30%);
+  border-radius: 20px 0 220px 0px;
+  opacity: 0.8;
+}
+#stylecard .inner .wrap article .swiper {
+  top: -20%;
+  text-align: center;
+  width: 270px;
+  height: 520px;
+}
+#stylecard .inner .wrap article .swiper .swiper-slide {
+  border-radius: 18px;
+}
+#stylecard .inner .wrap article .swiper .swiper-slide a {
+  top: 2%;
+  left: 10px;
+  position: absolute;
+}
+#stylecard .inner .wrap article .swiper .swiper-slide a i {
+  font-size: 30px;
+  color: #fff;
+}
+#stylecard .inner .wrap article .swiper .swiper-slide img {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  #stylecard {
+    padding: 100px 30px;
+  }
+  #stylecard .inner {
+    width: 100%;
+  }
+  #stylecard .inner .wrap article:nth-of-type(1) {
+    width: 50%;
+  }
+  #stylecard .inner .wrap article:nth-of-type(2) {
+    width: 100%;
+  }
+  #stylecard .inner .wrap article:nth-of-type(3) {
+    width: 100%;
+  }
+}
+#Best_item {
+  width: 100%;
+  min-height: 30px;
+  padding: 70px 0px;
+  background-color: rgba(216, 225, 234, 0.32);
+}
+#Best_item .inner {
+  width: 1200px;
+  margin: 0px auto;
+  display: flex;
+}
+#Best_item .inner #title {
+  width: 300px;
+  height: 100px;
+  display: inline-block;
+  vertical-align: top;
+}
+#Best_item .inner #title .titletxt {
+  text-align: left;
+  margin-bottom: 60px;
+}
+#Best_item .inner #title .titletxt h2 {
+  font: bold 40px/1 "Hahmlet";
+  color: #333;
+  font-weight: 800;
+}
+#Best_item .inner #title .titletxt h2 span {
+  font: bold 45px/1 "Hahmlet";
+  color: rgb(145, 174, 172);
+  font-weight: 800;
+}
+#Best_item .inner #title ul {
+  width: 230px;
+  display: block;
+}
+#Best_item .inner #title ul li {
+  text-align: center;
+  width: 30%;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  font: bold 15px "Hahmlet";
+  border-radius: 60px;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+#Best_item .inner #title ul li.active {
+  width: 72px;
+  background-color: rgb(145, 174, 172);
+}
+#Best_item .inner #title ul li.active div {
+  color: #fff;
+}
+#Best_item .inner #title ul li:hover {
+  width: 72px;
+  height: 29px;
+  background-color: rgb(192, 217, 214);
+}
+#Best_item .inner > ul {
+  width: calc(100% - 300px);
+  display: none;
+  vertical-align: top;
+}
+#Best_item .inner > ul.active {
+  display: flex;
+}
+#Best_item .inner > ul li {
+  width: 25%;
+  margin: 10px 0px;
+  position: relative;
+  padding-bottom: 20px;
+  text-align: center;
+  z-index: 1;
+}
+#Best_item .inner > ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  transition: all 1s;
+}
+#Best_item .inner > ul li img {
+  width: 100%;
+  border-radius: 20px;
+}
+#Best_item .inner > ul li:hover a {
+  opacity: 1;
+}
+#Best_item .inner > ul li .txt_wrap {
+  width: 90%;
+  margin: 0 auto;
+}
+#Best_item .inner > ul li .txt_wrap h3 {
+  font: 14px/1 "Hahmlet";
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+#Best_item .inner > ul li .txt_wrap p {
+  font: 14px/1 "Hahmlet";
+  font-weight: 400;
+}
+#Best_item .inner > ul .swiper-button-next,
+#Best_item .inner > ul .swiper-button-prev {
+  position: absolute;
+  z-index: 100;
+}
+
+#banner {
+  width: 100%;
+  height: 400px;
+  background-color: rgba(216, 225, 234, 0.32);
+}
+#banner .swiper {
+  width: 100%;
+  height: 100%;
+}
+#banner .swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#banner .swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  #banner {
+    display: none;
+  }
+}
+.hidden {
+  position: absolute;
+  top: -99999999px;
+  opacity: 0;
+}
+
+fieldset {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.user {
+  width: 100%;
+}
+.user .inner {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0px;
+}
+.user .inner h1 {
+  font: bold 32px/3 "Hahmlet";
+  margin-bottom: 40px;
+  color: rgb(157, 176, 195);
+}
+.user .inner h2 {
+  font: bold 17px/0.2 "Hahmlet";
+  color: #333;
+  margin-bottom: 15px;
+}
+.user .inner .terms {
+  overflow: scroll;
+  width: 100%;
+  height: 200px;
+  padding: 50px;
+  resize: none;
+  font: 13px/1.3 "Nanum Gothic";
+  color: #333;
+  background-color: #fff;
+  border-left: 2px solid #bbb;
+  border-top: 2px solid #bbb;
+  margin-bottom: 10px;
+}
+.user .inner .agreement {
+  margin-bottom: 60px;
+  display: flex;
+  gap: 10px;
+}
+.user .inner .agreement label[for=agree] {
+  font: 12px "Nanum Gothic";
+  color: #333;
+}
+.user .inner table {
+  width: 100%;
+  border-top: 3px solid rgb(157, 176, 195);
+  border-bottom: 3px solid rgb(157, 176, 195);
+}
+.user .inner table tr {
+  width: 100%;
+}
+.user .inner table tr th {
+  width: 15%;
+  text-align: center;
+  font: bold 14px/1 "Nanum Gothic";
+  color: #333;
+  padding: 20px 30px;
+  border-right: 2px solid rgb(157, 176, 195);
+  border-bottom: 2px solid rgb(157, 176, 195);
+  background-color: rgba(216, 225, 234, 0.32);
+}
+.user .inner table tr th:last-child {
+  background-color: rgba(216, 225, 234, 0.32);
+  text-align: center;
+  border-right: none;
+}
+.user .inner table tr th input[type=reset],
+.user .inner table tr th input[type=submit] {
+  width: 150px;
+  height: 40px;
+  border: none;
+  background-color: rgb(157, 176, 195);
+  font: bold 18px/1 "Nanum Gothic";
+  color: #fff;
+}
+.user .inner table tr td {
+  width: 100%;
+  border-bottom: 2px solid rgb(157, 176, 195);
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.user .inner table tr td input[type=text],
+.user .inner table tr td input[type=password] {
+  width: 30%;
+  height: 30px;
+  border: 2px solid rgb(157, 176, 195);
+  background-color: rgba(216, 225, 234, 0.32);
+  padding-left: 10px;
+}
+.user .inner table tr td input[type=checkbox],
+.user .inner table tr td input[type=radio] {
+  margin-right: 15px;
+}
+.user .inner table tr td label {
+  margin-right: 30px;
+}
+.user .inner table tr td .foreveruser {
+  width: 100%;
+}
+.user .inner table tr td p {
+  font: 14px/1 "Nanum Gothic";
+  display: block;
+  width: 100%;
+}
+.user .inner table tr td select {
+  width: 20%;
+  height: 30px;
+  border: 2px solid #333;
+  background-color: rgb(157, 176, 195);
+  margin-left: 15px;
+}
+
+#toggleBtn {
+  width: 34px;
+  height: 34px;
+  color: #fff;
+  background-color: rgb(157, 176, 195);
+  border-radius: 50%;
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#toggleBtn::before {
+  content: "\f06e";
+  font-family: fontAwesome;
+}
+#toggleBtn.hide::before {
+  content: "\f070";
+  font-family: fontAwesome;
+}
+
+.hidden {
+  position: absolute;
+  top: -99999999px;
+  opacity: 0;
+}
+
+.join {
+  width: 100%;
+}
+.join .inner {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 148px 0px;
+}
+.join .inner h1 {
+  display: block;
+  text-align: center;
+  font: bold 75px/1 "Nanum Gothic";
+}
+.join .inner h1 i {
+  color: rgb(157, 176, 195);
+}
+.join .inner h2 {
+  text-align: center;
+  font: bold 20px/3.5 "Nanum Gothic";
+}
+.join .inner span {
+  display: block;
+  text-align: center;
+  font: 15px/0 "Nanum Gothic";
+  color: #bbb;
+}
+
+/*# sourceMappingURL=style.css.map */
